@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zabt Et - Conquer Your City</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Mapbox GL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <!-- Mobile App Container -->
+    <div id="app">
+        <!-- Map Container (persists behind views) -->
+        <div id="map-container"></div>
+        
+        <!-- This container will hold our dynamic screens -->
+        <main id="view-container"></main>
+
+        <!-- Bottom Navigation -->
+        <nav id="bottom-nav" class="hidden">
+            <button class="nav-item active" onclick="navigate('home')">
+                <i class="ph ph-house"></i>
+                <span>HOME</span>
+            </button>
+            <button class="nav-item" onclick="navigate('map')">
+                <i class="ph ph-map-trifold"></i>
+                <span>MAP</span>
+            </button>
+            <button class="nav-item play-btn" onclick="navigate('select-run')">
+                <div class="play-circle">
+                    <i class="ph-fill ph-play"></i>
+                </div>
+            </button>
+            <button class="nav-item" onclick="navigate('events')">
+                <i class="ph ph-target"></i>
+                <span>EVENTS</span>
+            </button>
+            <button class="nav-item" onclick="navigate('profile')">
+                <i class="ph ph-user"></i>
+                <span>PROFILE</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>
